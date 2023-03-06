@@ -41,52 +41,58 @@ function giveChange() {
             document.querySelector('#result').classList.remove('hidden');
             document.querySelector("#return-detail").textContent="You have to give ₹"+ Math.abs(cashInputAmount-billInputAmount)+" to the customer 🙂";
             
-            let cashCount=0;
-            let AmountLeft=(CashInput.value-billInput.value);
+            let cashCount=0
+            let AmountLeft=(cashInputAmount-billInputAmount)
         
             while(AmountLeft>=2000){
-                AmountLeft=AmountLeft-2000;
-                cashCount++;
+                AmountLeft-=2000
+                cashCount++
             }
-            document.querySelector("#result2000").textContent = cashCount;
-            cashCount=0;
+            console.log('2000: ', cashCount)
+            document.querySelector("#result2000").textContent = cashCount
+            cashCount=0
             while(AmountLeft>=500){
-                AmountLeft=AmountLeft-500;
-
-                cashCount++;
+                AmountLeft-=500
+                cashCount++
             }
-            document.querySelector("#result500").textContent = cashCount;
-            cashCount=0;
+            console.log('500: ', cashCount)
+            document.querySelector("#result500").textContent = cashCount
+            cashCount=0
             while(AmountLeft>=100){
-                AmountLeft=AmountLeft-100;
-                cashCount++;
+                AmountLeft-=100
+                cashCount++
             }
-            document.querySelector("#result100").textContent = cashCount;
+            console.log('100: ', cashCount)
+            document.querySelector("#result100").textContent = cashCount
             cashCount=0;
             while(AmountLeft>=50){
-                AmountLeft=AmountLeft-50;
-                cashCount++;
+                AmountLeft-=50
+                cashCount++
             }
-            document.querySelector("#result50").textContent = cashCount;
-            cashCount=0;
+            console.log('50: ', cashCount)
+            document.querySelector("#result50").textContent = cashCount
+            cashCount=0
             while(AmountLeft>=20){
-                AmountLeft=AmountLeft-20;
-                cashCount++;
+                AmountLeft-=20
+                cashCount++
             }
-            document.querySelector("#result20").textContent = cashCount;
+            console.log('20: ', cashCount)
+            document.querySelector("#result20").textContent = cashCount
             cashCount=0;
             while(AmountLeft>=10){
-                AmountLeft=AmountLeft-10;
-                cashCount++;
+                AmountLeft-=10
+                cashCount++
             }
-            document.querySelector("#result10").textContent = cashCount;
-            cashCount=0;
+            console.log('10: ', cashCount)
+            document.querySelector("#result10").textContent = cashCount
+            cashCount=0
 
             while(AmountLeft>=1){
-                AmountLeft=AmountLeft-1;
-                cashCount++;
+                AmountLeft-=1
+                cashCount++
             }
-            document.querySelector('#result1').textContent = cashCount;
+            console.log('1: ', cashCount)
+            document.querySelector('#result1').textContent = cashCount
             
         }
     }
