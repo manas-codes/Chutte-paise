@@ -2,6 +2,13 @@ const billInput=document.querySelector("#bill-amount");
 const CashInput= document.querySelector("#cash-given");
 const check=document.querySelector("#check-btn");
 const next=document.querySelector("#next-btn");
+const scrollToAbout = document.querySelector('a[href="#activity-block"]');
+scrollToAbout.addEventListener('click', (event) => {
+  event.preventDefault();
+  const aboutSection = document.querySelector('#activity-block');
+  aboutSection.scrollIntoView({ behavior: 'smooth' });
+});
+
 
 function giveChange() {
     if(!billInput.value){
